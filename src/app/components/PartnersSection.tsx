@@ -121,45 +121,6 @@ export default function PartnersSection() {
                     </div>
                 </div>
             </div>
-
-            <style jsx>{`
-        .marquee {
-          width: 100%;
-          overflow: hidden;
-        }
-
-        .marquee-track {
-          display: inline-flex;
-          align-items: center;
-          white-space: nowrap;
-          animation: marquee 20s linear infinite;
-        }
-
-        .marquee:hover .marquee-track {
-          animation-play-state: paused;
-        }
-
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @media (max-width: 768px) {
-          .marquee-track {
-            animation-duration: 28s;
-          }
-        }
-
-        @media (min-width: 769px) {
-          .marquee-track {
-            animation-duration: 18s;
-          }
-        }
-      `}</style>
         </section>
     )
 }
