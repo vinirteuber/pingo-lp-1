@@ -6,22 +6,22 @@ export default function GenericForm() {
     return (
         <div className="relative w-full mb-10">
             <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden">
-                <div className="flex flex-col md:flex-row">
-                    <div className="flex-1 ml-[13rem] flex flex-col justify-center">
-                        <h2 className="text-4xl font-normal text-blue-900 mb-2">
+                <div className="flex flex-col container mx-auto px-6 md:flex-row">
+                    <div className="flex-1 md:ml-10 flex flex-col justify-center text-center md:text-left mt-8 md:mt-0">
+                        <h2 className="text-3xl md:text-4xl font-normal text-blue-900 mb-2">
                             Quer começar?
                         </h2>
-                        <p className="text-4xl font-bold text-blue-900 mb-6">
+                        <p className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
                             Envie sua ideia agora!
                         </p>
-                        <p className="text-normal text-blue-900 leading-relaxed">
-                            Nosso tempo médio de resposta em<br />
+                        <p className="text-sm md:text-normal text-blue-900 leading-relaxed">
+                            Nosso tempo médio de resposta em<br className="hidden md:block" />
                             horário comercial é 30 minutos.
                         </p>
                     </div>
 
-                    <div className="flex-1 px-[15rem] py-[5rem]">
-                        <h3 className="text-left text-2xl font-normal text-gray-700 mb-6">
+                    <div className="flex-1 py-10 md:py-[5rem]">
+                        <h3 className="text-left text-xl md:text-2xl font-normal text-gray-700 mb-6">
                             Preencha o formulário:
                         </h3>
 
@@ -31,7 +31,7 @@ export default function GenericForm() {
                                 className="bg-gray-100 border-0 h-10 text-sm rounded-md shadow-sm"
                             />
 
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 <Input
                                     placeholder="Telefone"
                                     className="bg-gray-100 border-0 h-10 text-sm rounded-md shadow-sm"
@@ -42,7 +42,7 @@ export default function GenericForm() {
                                 />
                             </div>
 
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 <Input
                                     placeholder="Cargo/Função"
                                     className="bg-gray-100 border-0 h-10 text-sm rounded-md shadow-sm"
@@ -60,7 +60,7 @@ export default function GenericForm() {
 
                             <Button
                                 type="submit"
-                                className=" bg-[#003772] text-white font-semibold h-11 rounded-lg mt-4"
+                                className="w-full md:w-auto bg-[#003772] text-white font-semibold h-11 rounded-lg mt-4"
                             >
                                 Seguir com a locação
                             </Button>
