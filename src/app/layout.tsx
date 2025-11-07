@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Figtree } from "next/font/google";
 import "./globals.css";
+import FloatingWhatsApp from "./components/FloatWhatsApp";
+
+const FigtreeSans = Figtree({
+  variable: "--font-figtree-sans",
+  subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "Pingo Estudio Criativo",
@@ -16,8 +24,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/ewp7rzr.css" />
       </head>
       <body
-        className={` antialiased`}
+        className={`${FigtreeSans.variable} antialiased`}
       >
+        <FloatingWhatsApp />
         {children}
       </body>
     </html>

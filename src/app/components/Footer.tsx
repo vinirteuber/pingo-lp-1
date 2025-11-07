@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -15,10 +16,12 @@ export default function Footer() {
                 </div>
                 {/* <p>&copy; {new Date().getFullYear()} Pingo Estudio Criativo. Todos os direitos reservados.</p> */}
             </footer>
-            <div className="bg-white flex justify-between items-center px-[10rem] py-4 text-[#003772] text-sm">
+            <div className="bg-white flex justify-between items-center px-[10rem] py-6 text-[#003772] text-sm">
                 <span>Pingo! Estúdios/A: 61.186.490/0001-57 | Rua Guaíra, 994, Iririú, Joinville / SC - CEP 89227-445 <br />
                     Pingo! Estúdios - Todos os direitos reservados.</span>
-                <Image src="/assets/solanis.svg" alt="Desenvolvido pela Solanis" width={200} height={100} />
+                <Link href='https://solanis.ai' target="_blank" >
+                    <Image src="/assets/solanis.svg" alt="Desenvolvido pela Solanis" width={200} height={100} />
+                </Link>
             </div>
         </div>
     );

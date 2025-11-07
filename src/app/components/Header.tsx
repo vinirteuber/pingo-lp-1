@@ -55,7 +55,7 @@ export default function Header() {
                         <Link href="/sobrenos">
                             <li className="mr-10">Sobre nós</li>
                         </Link>
-                        <Link href="/contato">
+                        <Link href="https://wa.me/5547992743083" target="_blank">
                             <li>Contato</li>
                         </Link>
                     </ul>
@@ -77,7 +77,7 @@ export default function Header() {
                             <Link href="/sobrenos" onClick={() => setMobileMenuOpen(false)}>
                                 <li className="py-2">Sobre nós</li>
                             </Link>
-                            <Link href="/contato" onClick={() => setMobileMenuOpen(false)}>
+                            <Link href="https://wa.me/5547992743083" target="_blank" onClick={() => setMobileMenuOpen(false)}>
                                 <li className="py-2">Contato</li>
                             </Link>
                         </ul>
