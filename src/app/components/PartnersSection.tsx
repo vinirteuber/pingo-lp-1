@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import { Clapperboard, Palette, ClipboardList, BarChart3 } from "lucide-react"
+import { Clapperboard, Handshake, SprayCan, ChartCandlestick } from "lucide-react"
 
 export default function PartnersSection() {
     const logos = [
@@ -80,7 +80,7 @@ export default function PartnersSection() {
 
                         <div className="flex flex-col items-start gap-4 pb-8 border-b border-gray-200 md:border-b-0 md:pb-0">
                             <div className="bg-[#3DE6FF] p-3 rounded-xl">
-                                <ClipboardList className="text-[#003672]" size={28} strokeWidth={2} />
+                                <Handshake className="text-[#003672]" size={28} strokeWidth={2} />
                             </div>
                             <div>
                                 <h4 className="text-[#00285F] text-2xl font-normal mb-2">Produção Executiva</h4>
@@ -94,7 +94,7 @@ export default function PartnersSection() {
 
                         <div className="flex flex-col items-start gap-4">
                             <div className="bg-[#3DE6FF] p-3 rounded-xl">
-                                <Palette className="text-[#003672]" size={28} strokeWidth={2} />
+                                <SprayCan className="text-[#003672]" size={28} strokeWidth={2} />
                             </div>
                             <div>
                                 <h4 className="text-[#00285F] text-2xl font-normal mb-2">Arte e Criação</h4>
@@ -107,7 +107,7 @@ export default function PartnersSection() {
 
                         <div className="flex flex-col items-start gap-4">
                             <div className="bg-[#3DE6FF] p-3 rounded-xl">
-                                <BarChart3 className="text-[#003672]" size={28} strokeWidth={2} />
+                                <ChartCandlestick className="text-[#003672]" size={28} strokeWidth={2} />
                             </div>
                             <div>
                                 <h4 className="text-[#00285F] text-2xl font-normal mb-2">Resultados</h4>

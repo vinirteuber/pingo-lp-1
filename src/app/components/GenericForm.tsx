@@ -7,7 +7,7 @@ export default function GenericForm() {
         <div className="relative w-full mb-10">
             <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden">
                 <div className="flex flex-col md:flex-row">
-                    <div className="flex-1 px-[15rem] flex flex-col justify-center">
+                    <div className="flex-1 ml-[13rem] flex flex-col justify-center">
                         <h2 className="text-4xl font-normal text-blue-900 mb-2">
                             Quer começar?
                         </h2>

@@ -1,13 +1,12 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import { MessageCircle } from "lucide-react"
 
 export default function WhyHireSection() {
     return (
         <section className="bg-[#00285F] flex justify-center align-center py-24 overflow-hidden">
             <div className="container flex justify-center align-center px-6">
-                <div className="bg-[#00C9FF] rounded-3xl w-full md:w-[77%] lg:w-[77%] sm:w-[95%] text-[#00285F] relative overflow-visible">
+                <div className="bg-[#3DE6FF] rounded-3xl w-full container mx-auto px-6 text-[#00285F] relative overflow-visible">
                     <div className="flex flex-col md:flex-row items-center md:items-stretch justify-between relative">
                         <div className="w-full md:w-[50%] z-20 relative flex flex-col justify-center p-8">
                             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-3">
@@ -23,7 +22,7 @@ export default function WhyHireSection() {
                                 className="inline-flex items-center gap-2 bg-[#FFEA00] text-[#00285F] font-semibold px-6 py-3 rounded-lg hover:bg-[#fbe83f] transition-all w-fit"
                             >
                                 <span>Avalie meu projeto</span>
-                                <MessageCircle size={20} />
+                                <Image src="/assets/pingowhats.svg" alt="WhatsApp" width={20} height={20} />
                             </Link>
                         </div>
 
