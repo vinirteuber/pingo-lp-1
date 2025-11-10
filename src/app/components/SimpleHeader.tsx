@@ -1,12 +1,14 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function SimpleHeader() {
 
     const [scrolled, setScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const pathname = usePathname()
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 0);
@@ -14,6 +16,8 @@ export default function SimpleHeader() {
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
+
+    const isActive = (path: string) => pathname === path
 
     return (
         <>
@@ -44,16 +48,16 @@ export default function SimpleHeader() {
 
                     <ul className="hidden md:flex text-[#FAFFE3] text-lg  z-[100]">
                         <Link href="/">
-                            <li className="mr-10">Home</li>
+                            <li className={"mr-10" + (isActive('/') ? ' font-bold' : '')}>Home</li>
                         </Link>
                         <Link href="/portifolio">
-                            <li className="mr-10">Portifólio</li>
+                            <li className={"mr-10" + (isActive('/portifolio') ? ' font-bold' : '')}>Portifólio</li>
                         </Link>
                         <Link href="/estudio">
-                            <li className="mr-10">Estúdio</li>
+                            <li className={"mr-10" + (isActive('/estudio') ? ' font-bold' : '')}>Estúdio</li>
                         </Link>
                         <Link href="/sobrenos">
-                            <li className="mr-10">Sobre nós</li>
+                            <li className={"mr-10" + (isActive('/sobrenos') ? ' font-bold' : '')}>Sobre nós</li>
                         </Link>
                         <Link href="https://wa.me/5547992743083" target="_blank">
                             <li>Contato</li>

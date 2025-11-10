@@ -4,7 +4,7 @@ import { Send, Users, ClipboardList } from "lucide-react"
 export default function HowToContractSection() {
 
     return (
-        <section className="bg-[#00285F] text-white py-24 flex flex-col items-center justify-center">
+        <section className=" text-white py-24 flex flex-col items-center justify-center">
             <div className="w-full container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
 
                 <div className="flex flex-col gap-6">

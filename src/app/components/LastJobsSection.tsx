@@ -32,7 +32,7 @@ export default function LastJobsSection() {
 
     return (
         <>
-            <h1 className="py-15 px-[8rem] font-normal text-4xl text-[#3DE6FF]">Ultimos trabalhos</h1>
+            <h1 className="py-15 px-[8rem] font-semibold text-4xl text-[#3DE6FF]">Ultimos trabalhos</h1>
             <section className="max-w-8xl">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                     {images.map((src, idx) => (

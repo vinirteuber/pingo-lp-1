@@ -2,11 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
 
     const [scrolled, setScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const pathname = usePathname()
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 0);
@@ -14,6 +16,8 @@ export default function Header() {
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
+
+    const isActive = (path: string) => pathname === path
 
     return (
         <>
@@ -44,16 +48,16 @@ export default function Header() {
 
                     <ul className="hidden md:flex text-[#FAFFE3] text-lg relative z-[100]">
                         <Link href="/">
-                            <li className="mr-10">Home</li>
+                            <li className={`mr-10 ${isActive('/') ? 'font-bold' : ''}`}>Home</li>
                         </Link>
                         <Link href="/portifolio">
-                            <li className="mr-10">Portifólio</li>
+                            <li className={`mr-10 ${isActive('/portifolio') ? 'font-bold' : ''}`}>Portifólio</li>
                         </Link>
                         <Link href="/estudio">
-                            <li className="mr-10">Estúdio</li>
+                            <li className={`mr-10 ${isActive('/estudio') ? 'font-bold' : ''}`}>Estúdio</li>
                         </Link>
                         <Link href="/sobrenos">
-                            <li className="mr-10">Sobre nós</li>
+                            <li className={`mr-10 ${isActive('/sobrenos') ? 'font-bold' : ''}`}>Sobre nós</li>
                         </Link>
                         <Link href="https://wa.me/5547992743083" target="_blank">
                             <li>Contato</li>
@@ -66,16 +70,16 @@ export default function Header() {
                     <div className="md:hidden bg-neutral-950/95 backdrop-blur-xl">
                         <ul className="flex flex-col text-[#FAFFE3] text-lg px-4 py-6 space-y-4">
                             <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                                <li className="py-2">Home</li>
+                                <li className={`py-2 ${isActive('/') ? 'font-bold' : ''}`}>Home</li>
                             </Link>
                             <Link href="/portifolio" onClick={() => setMobileMenuOpen(false)}>
-                                <li className="py-2">Portifólio</li>
+                                <li className={`py-2 ${isActive('/portifolio') ? 'font-bold' : ''}`}>Portifólio</li>
                             </Link>
                             <Link href="/estudio" onClick={() => setMobileMenuOpen(false)}>
-                                <li className="py-2">Estúdio</li>
+                                <li className={`py-2 ${isActive('/estudio') ? 'font-bold' : ''}`}>Estúdio</li>
                             </Link>
                             <Link href="/sobrenos" onClick={() => setMobileMenuOpen(false)}>
-                                <li className="py-2">Sobre nós</li>
+                                <li className={`py-2 ${isActive('/sobrenos') ? 'font-bold' : ''}`}>Sobre nós</li>
                             </Link>
                             <Link href="https://wa.me/5547992743083" target="_blank" onClick={() => setMobileMenuOpen(false)}>
                                 <li className="py-2">Contato</li>

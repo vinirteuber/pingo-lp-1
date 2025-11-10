@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function WhyHireSection() {
     return (
-        <section className="bg-[#00285F] flex justify-center align-center py-24 overflow-hidden">
+        <section className="flex justify-center align-center py-24 overflow-hidden">
             <div className="container flex justify-center align-center px-6">
                 <div className="bg-[#3DE6FF] rounded-3xl w-full container mx-auto px-6 text-[#00285F] relative overflow-visible">
                     <div className="flex flex-col md:flex-row items-center md:items-stretch justify-between relative">
