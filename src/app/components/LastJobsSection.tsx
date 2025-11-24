@@ -32,9 +32,11 @@ export default function LastJobsSection() {
 
     return (
         <>
-            <h1 className="py-15 px-[8rem] font-semibold text-4xl text-[#3DE6FF]">Ultimos trabalhos</h1>
-            <section className="max-w-8xl">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+            <div className="flex justify-between items-end">
+                <h1 className="py-15 px-[8rem] font-semibold text-4xl text-[#3DE6FF]">Ultimos trabalhos</h1>
+            </div>
+            <section className="max-w-8xl relative overflow-visible">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 relative">
                     {images.map((src, idx) => (
                         <figure
                             key={idx}
@@ -50,6 +52,14 @@ export default function LastJobsSection() {
                             />
                         </figure>
                     ))}
+                    <div className="absolute top-0 right-20 translate-x-1/8 -translate-y-[65%] z-10 animate-spin-slow">
+                        <Image
+                            src="/assets/pingoHeroImage.svg"
+                            alt="Pingo Seal"
+                            width={300}
+                            height={300}
+                        />
+                    </div>
                 </div>
             </section>
         </>

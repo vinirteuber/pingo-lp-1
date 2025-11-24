@@ -94,20 +94,25 @@ export default function Header() {
                     muted
                     loop
                     playsInline
+                    preload="metadata"
+                    poster="/assets/heroImage1.svg"
                     className="w-full object-cover h-[50vh] md:h-auto"
+                    aria-label="Vídeo de apresentação Pingo Estúdio Criativo"
                 >
+                    <source src="/assets/herovideo.webm" type="video/webm" />
                     <source src="/assets/herovideo.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos em HTML5.
                 </video>
                 <Image
                     src="/assets/pingoHeroImage.svg"
-                    alt="User Avatar"
+                    alt="Logo animado Pingo Estúdio Criativo"
                     width={180}
                     style={{
                         animation: "spin 45s linear infinite"
                     }}
                     height={180}
                     className="min-w-[200px] md:min-w-[350px] lg:min-w-[500px] absolute left-4 md:left-8 bottom-10 md:bottom-20 select-none pointer-events-none"
+                    priority
                 />
             </div>
         </>
